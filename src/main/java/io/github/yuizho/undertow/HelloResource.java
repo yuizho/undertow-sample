@@ -19,6 +19,8 @@ public class HelloResource {
     @GET
     @Produces("text/plain")
     public String hello() {
+        System.out.println("ThreadId: " + Thread.currentThread().getId());
+        System.out.println("HashCode: " + System.identityHashCode(this));
         return "hello resource !!";
     }
 }
