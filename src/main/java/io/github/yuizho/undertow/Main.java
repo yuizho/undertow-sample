@@ -8,6 +8,7 @@ package io.github.yuizho.undertow;
 import io.undertow.Handlers;
 import io.undertow.Undertow;
 import io.undertow.server.handlers.PathHandler;
+import io.undertow.server.handlers.resource.ClassPathResourceManager;
 import io.undertow.servlet.Servlets;
 import io.undertow.servlet.api.DeploymentInfo;
 import io.undertow.servlet.api.DeploymentManager;
@@ -21,6 +22,7 @@ public class Main {
         DeploymentInfo servletBuilder = Servlets.deployment()
                 .setClassLoader(Main.class.getClassLoader())
                 .setContextPath("/undertow")
+            .setResourceManager(new ClassPathResourceManager(Main.class.getClassLoader(), "static"))
                 .setDeploymentName("test")
                 .addServlets(
                         Servlets.servlet("JserseyContainer", JerseyContainer.class)
