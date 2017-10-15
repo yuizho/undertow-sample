@@ -1,5 +1,5 @@
 # undertow-sample
-The sample project of undertow and jersey.
+The sample project of undertow and jersey and webpack as frontend dependency resolver.
 
 ## how to use Dockerfile
 ```bash

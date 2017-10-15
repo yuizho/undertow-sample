@@ -41,3 +41,7 @@ nbproject/private/
 build/
 nbbuild/
 dist/
+
+# frontend files
+node_modules
+src/main/resources/static/scripts/
