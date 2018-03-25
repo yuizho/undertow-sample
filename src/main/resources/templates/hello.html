@@ -11,7 +11,7 @@
             $("#ajax-button").on('click', function() {
               $.ajax({
                 type: 'POST',
-                url: 'http://localhost:8888/undertow/webresources/hello/json'
+                url: '/undertow/webresources/hello/json'
               }).done(function(result) {
                 console.log(result);
               }).fail(function(result) {
