@@ -1,5 +1,7 @@
 package io.github.yuizho.undertow;
 
+import io.github.yuizho.undertow.template.CacheBustingDialect;
+import io.github.yuizho.undertow.template.CacheBustingSrcTagProcessor;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -49,6 +51,7 @@ public class HelloResource {
         IContext ctx = new WebContext(servletRequest, servletResponse, servletContext);
         TemplateEngine templateEngine = new TemplateEngine();
         templateEngine.setTemplateResolver(templateResolver);
+        templateEngine.addDialect(new CacheBustingDialect());
         return templateEngine.process("hello", ctx);
     }
 }

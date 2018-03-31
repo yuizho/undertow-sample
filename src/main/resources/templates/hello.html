@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:cash-busting="http://www.thymeleaf.org">
     <head>
         <title>Output Management</title>
         <meta charset="UTF-8"/>
@@ -23,7 +24,7 @@
     </head>
     <body>
         <h1>Hello!!</h1>
-        <script src="../static/scripts/hello.bundle.js" th:src="@{/scripts/hello.bundle.js}"></script>
+        <script src="../static/scripts/hello.bundle.js" cash-busting:src="@{/scripts/hello.bundle.js}"></script>
         <button type="button" id="ajax-button" value="">request to api</button>
     </body>
 </html>
